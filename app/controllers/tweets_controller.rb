@@ -43,6 +43,6 @@ def create
   
   private
   def tweet_params
-    params.require(:tweet).permit(:body)
+    params.require(:tweet).permit(:body, :sleep_at, :sleep_quality, :bedtime)
   end
 end

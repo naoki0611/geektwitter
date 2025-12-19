@@ -1,0 +1,51 @@
+.image-first{
+  width: 100%;  /* 親要素の幅いっぱいに広げる */
+  height: auto; /* 元の縦横比を維持する */
+  display: block; /* 一部のブラウザで下部にできる余白をなくす */
+}
+/* MARK: - First Block End */
+/* MARK: - Second Block Start */
+#second-block {
+padding: 60px 0px;
+}
+.story-title {
+font-size: 70px;
+font-family: fantasy;
+text-align: center;
+margin-bottom: 50px;
+}
+.my-story-container {
+width: 80%;
+margin: 0 auto;
+}
+.my-story {
+margin-bottom: 10%;
+font-family: cursive;
+}
+.my-story-title {
+width: 100%;
+font-size: 30px;
+font-weight: bold;
+text-align: center;
+}
+.link-top{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #F7F7F7;
+    border-left: solid 6px #1565C0;/*左線*/
+    color: black;/*文字色*/
+    font-weight: bold;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    display: block; /* リンクをブロック要素にする */
+    width: 150px; /* 必要に応じて幅を指定する */
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto; /* 水平方向の中央揃え */
+    text-align: center;
+    font-size: larger;
+}
+
+
+
+

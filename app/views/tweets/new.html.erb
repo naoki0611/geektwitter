@@ -5,6 +5,21 @@
     <%= f.label :body %>
     <%= f.text_field :body, :size => 140 %>
   </div>
+  <div>
+    <%= f.label :bedtime, "就寝時間" %><br>
+    <%= f.datetime_field :bedtime %>
+  </div>
+  <%# 睡眠時間の入力 (カレンダー形式の選択) %>
+  <div>
+    <%= f.label :sleep_at, "起床時間" %><br>
+    <%= f.datetime_field :sleep_at %>
+  </div>
+
+  <%# 睡眠の質の選択 (1〜5のセレクトボックス) %>
+  <div>
+    <%= f.label :sleep_quality, "睡眠の質 (1:悪い 〜 5:非常に良い)" %><br>
+    <%= f.select :sleep_quality, [1, 2, 3, 4, 5], include_blank: "選択してください" %>
+  </div>
   <%= f.submit "Tweetする" %>
 <% end %>
 <%= link_to "Tweet一覧に戻る", tweets_path %>

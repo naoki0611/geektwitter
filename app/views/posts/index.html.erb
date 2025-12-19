@@ -1,6 +1,25 @@
+<%= link_to "予定の追加", new_post_path %>
 <%= month_calendar(attribute: :start_time, start_attribute: :start_time, end_attribute: :end_time, events: @events) do |date, events| %>
-    <%= date %>
+  <%# 日付の数字だけを表示（2025-12-01 ではなく 1 と表示） %>
+  <%= date.day %>
+
   <% events.each do |event| %>
-      <p><%= link_to event.title, event %></p>
+    <div class="event-item">
+      <%# 時刻の表示 %>
+      <small style="color: #666;">
+        <% if event.start_time.present? %>
+          <%= event.start_time.strftime("%H:%M") %>
+        <% end %>
+        
+        <% if event.end_time.present? %>
+          〜 <%= event.end_time.strftime("%H:%M") %>
+        <% end %>
+      </small>
+
+      <%# タイトル %>
+      <p style="margin: 0; font-size: 0.9em;">
+        <%= link_to event.title, event %>
+      </p>
+    </div>
   <% end %>
 <% end %>
