@@ -60,7 +60,7 @@ group :test do
   gem "selenium-webdriver"
 end
 gem 'sass-rails'
-gem 'simple_calendar', '~> 2.0'
+gem 'simple_calendar', '~> 3.1'
 gem 'devise'
 group :production do
   gem "pg"
